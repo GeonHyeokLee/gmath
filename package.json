@@ -1,0 +1,32 @@
+{
+  "name": "graphics-math",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/graphics-math.cjs",
+  "keywords": [
+    "math",
+    "graphics",
+    "utils"
+  ],
+  "author": {
+    "name": "GeonHyeokLee",
+    "email": "geonhyeoklee.kr@gmail.com"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/graphics-math.d.ts",
+      "import": "./dist/graphics-math.js",
+      "require": "./dist/graphics-math.cjs"
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "prepack": "npm run build",
+    "prebuild": "rm -rf dist",
+    "build": "tsc && node build.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "typescript": "^5.2.2"
+  }
+}
