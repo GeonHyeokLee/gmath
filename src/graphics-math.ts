@@ -26,3 +26,11 @@ export function normalize(vec: Vector) {
 
   return vec.map((val) => val / size);
 }
+
+export function add(vec1: Vector, vec2: Vector): Vector {
+  if (!isSameDimensionVector(vec1, vec2)) {
+    throw new Error("Not the same dimension vector.");
+  }
+
+  return vec1.map((val, idx) => val + vec2[idx]) as Vector;
+}
