@@ -18,9 +18,7 @@ export function dot(vec1: Vector, vec2: Vector): Scalar {
 }
 
 export function normalize(vec: Vector) {
-  const size = Math.sqrt(
-    Math.abs(vec.reduce((prev, cur) => prev + cur * cur, 0))
-  );
+  const size = Math.sqrt(vec.reduce((prev, cur) => prev + cur * cur, 0));
 
   if (size <= 0) {
     throw new Error("It is not an intact vector.");
