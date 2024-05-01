@@ -1,9 +1,5 @@
-type Vec2 = [number, number];
-type Vec3 = [number, number, number];
-type Vec4 = [number, number, number];
-type Vector = Vec2 | Vec3 | Vec4;
-
-type Scalar = number;
+export type Vector = Array<number>;
+export type Scalar = number;
 
 function isSameDimensionVector(vec1: Vector, vec2: Vector): boolean {
   return vec1.length === vec2.length;
@@ -17,7 +13,7 @@ export function dot(vec1: Vector, vec2: Vector): Scalar {
   return vec1.reduce((prev, cur, curIdx) => prev + cur * vec2[curIdx], 0);
 }
 
-export function normalize(vec: Vector) {
+export function normalize(vec: Vector): Vector {
   const size = Math.sqrt(vec.reduce((prev, cur) => prev + cur * cur, 0));
 
   if (size <= 0) {
@@ -32,5 +28,5 @@ export function add(vec1: Vector, vec2: Vector): Vector {
     throw new Error("Not the same dimension vector.");
   }
 
-  return vec1.map((val, idx) => val + vec2[idx]) as Vector;
+  return vec1.map((val, idx) => val + vec2[idx]);
 }
