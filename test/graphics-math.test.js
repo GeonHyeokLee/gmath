@@ -1,4 +1,4 @@
-const { dot, normalize } = require("../dist/graphics-math.cjs");
+const { dot, normalize, add } = require("../dist/graphics-math.cjs");
 
 // Find the inner product of the three-dimensional vector.
 // A scalar value must be obtained as a return value.
@@ -12,13 +12,13 @@ test("음수 값을 가진 3차원 벡터의 내적을 구하며 반환 값으�
   expect(dot(vec3, vec3)).toBe(14);
 });
 
-test("차원의 다른 두 벡터의 내적을 구한다.", () => {
+test("다른 차원의 두 벡터 내적을 구한다.", () => {
   const vec2 = [1, 2];
   const vec3 = [1, 2, 3];
   expect(dot(vec2, vec3)).toBe(5);
 });
 
-test("차원의 다른 두 벡터의 내적을 구한다.", () => {
+test("다른 차원의 두 벡터 내적을 구한다.", () => {
   const vec2 = [1, 2];
   const vec3 = [1, 2, 3];
   expect(dot(vec3, vec2)).toBe(5);
@@ -33,4 +33,17 @@ test("3차원 벡터를 정규화한 결과를 이용하여 내적을 구한다.
   });
 
   expect(dot(normalized_vec, normalized_vec)).toBeCloseTo(1);
+});
+
+test("3차원의 두 벡터를 더한다.", () => {
+  const vec3 = [1, 2, 3];
+  const result = [2, 4, 6];
+  expect(add(vec3, vec3)).toEqual(result);
+});
+
+test("다른 차원의 두 벡터를 더한다.", () => {
+  const vec2 = [1, 2];
+  const vec3 = [1, 2, 3];
+  const result = [2, 4];
+  expect(add(vec2, vec3)).toEqual(result);
 });
