@@ -20,7 +20,7 @@ export function normalize(vec: Vector): Vector {
     throw new Error("It is not an intact vector.");
   }
 
-  return vec.map((val) => val / size);
+  return vec.map((val) => parseInt((val / size).toFixed(2), 10));
 }
 
 export function add(vec1: Vector, vec2: Vector): Vector {
