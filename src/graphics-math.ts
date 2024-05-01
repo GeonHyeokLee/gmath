@@ -5,9 +5,10 @@ function isSameDimensionVector(vec1: Vector, vec2: Vector): boolean {
   return vec1.length === vec2.length;
 }
 
+// 두 벡터의 차원이 다를 경우 낮은 차원의 벡터를 기준으로 내적을 시도합니다.
 export function dot(vec1: Vector, vec2: Vector): Scalar {
-  if (!isSameDimensionVector(vec1, vec2)) {
-    throw new Error("Not the same dimension vector.");
+  if (vec1.length > vec2.length) {
+    return dot(vec2, vec1);
   }
 
   return vec1.reduce((prev, cur, curIdx) => prev + cur * vec2[curIdx], 0);
@@ -20,12 +21,13 @@ export function normalize(vec: Vector): Vector {
     throw new Error("It is not an intact vector.");
   }
 
-  return vec.map((val) => parseInt((val / size).toFixed(2), 10));
+  return vec.map((val) => Number((val / size).toFixed(2)));
 }
 
+// 두 벡터의 차원이 다를 경우 낮은 차원의 벡터를 기준으로 더합니다.
 export function add(vec1: Vector, vec2: Vector): Vector {
-  if (!isSameDimensionVector(vec1, vec2)) {
-    throw new Error("Not the same dimension vector.");
+  if (vec1.length > vec2.length) {
+    return add(vec2, vec1);
   }
 
   return vec1.map((val, idx) => val + vec2[idx]);
