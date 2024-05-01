@@ -5,9 +5,13 @@ function isSameDimensionVector(vec1: Vector, vec2: Vector): boolean {
   return vec1.length === vec2.length;
 }
 
+function compareVectorLength(vec1: Vector, vec2: Vector): boolean {
+  return vec1.length > vec2.length;
+}
+
 // 두 벡터의 차원이 다를 경우 낮은 차원의 벡터를 기준으로 내적을 시도합니다.
 export function dot(vec1: Vector, vec2: Vector): Scalar {
-  if (vec1.length > vec2.length) {
+  if (compareVectorLength(vec1, vec2)) {
     return dot(vec2, vec1);
   }
 
@@ -26,7 +30,7 @@ export function normalize(vec: Vector): Vector {
 
 // 두 벡터의 차원이 다를 경우 낮은 차원의 벡터를 기준으로 더합니다.
 export function add(vec1: Vector, vec2: Vector): Vector {
-  if (vec1.length > vec2.length) {
+  if (compareVectorLength(vec1, vec2)) {
     return add(vec2, vec1);
   }
 
