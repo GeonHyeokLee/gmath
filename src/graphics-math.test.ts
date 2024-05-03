@@ -1,4 +1,4 @@
-const { dot, normalize, add } = require("../dist/graphics-math.cjs");
+import { dot, normalize, add } from "./graphics-math";
 
 // Find the inner product of the three-dimensional vector.
 // A scalar value must be obtained as a return value.
