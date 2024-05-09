@@ -1,8 +1,8 @@
 {
   "name": "graphics-math",
   "version": "0.0.3",
-  "type": "module",
   "main": "dist/graphics-math.cjs",
+  "type": "module",
   "keywords": [
     "math",
     "graphics",
