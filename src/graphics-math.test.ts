@@ -1,3 +1,4 @@
+import { test, expect } from "@jest/globals";
 import { dot, normalize, add, cross } from "./graphics-math";
 
 // Dot Product
