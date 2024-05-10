@@ -1,7 +1,7 @@
 const esbuild = require("esbuild");
 
 const baseConfig = {
-  entryPoints: ["src/graphics-math.ts"],
+  entryPoints: ["src/index.ts"],
   outdir: "dist",
   bundle: true,
   sourcemap: true,
