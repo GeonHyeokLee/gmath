@@ -1,14 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "nodenext",
-    "lib": ["es5", "es6", "ES2020", "DOM"],
-    "declaration": true,
+    "target": "ES2022",
+    "module": "CommonJS",
+    "lib": ["es5", "es6", "DOM"],
     "outDir": "dist",
     "strict": true,
-
-    // d.ts 파일만 생성
+    "declaration": true,
     "emitDeclarationOnly": true
   },
-  "include": ["src/graphics-math.ts"]
+  "include": ["src/index.ts"]
 }
