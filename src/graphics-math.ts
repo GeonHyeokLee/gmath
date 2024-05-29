@@ -1,4 +1,4 @@
-import type { Scalar, Vector } from "./types";
+import type { Scalar, Vec3, Vector } from "./types";
 import {
   compareVectorLength,
   isThreeDimensionsVector,
@@ -18,6 +18,7 @@ export function dot(vec1: Vector, vec2: Vector): Scalar {
 }
 
 // '3차원' 두 벡터의 외적
+export function cross(vec1: Vec3, vec2: Vec3): Vec3;
 export function cross(vec1: Vector, vec2: Vector): Vector {
   assert(
     isThreeDimensionsVector(vec1, vec2),

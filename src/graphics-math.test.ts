@@ -52,8 +52,8 @@ test("다른 차원의 두 벡터를 더한다.", () => {
 
 // Cross Product
 test("벡터의 외적을 구한다.", () => {
-  const mockVector1 = [2, 3, 10];
-  const mockVector2 = [4, 2, 7];
+  const mockVector1: [number, number, number] = [2, 3, 10];
+  const mockVector2: [number, number, number] = [4, 2, 7];
   const mockResultVector = [7, 26, -3];
 
   expect(cross(mockVector1, mockVector2)).toEqual(mockResultVector);
@@ -63,5 +63,6 @@ test("3차원이 아닌 벡터의 외적을 시도하여 실패한다.", () => {
   const mockVector1 = [2, 10];
   const mockVector2 = [4, 2, 7];
 
+  // 타입 에러가 발생해야한다.
   expect(() => cross(mockVector1, mockVector2)).toThrow();
 });
