@@ -1,1 +1,1 @@
-export * from "./graphics-math";
+export * from "./gmath";

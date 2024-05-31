@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { dot, normalize, add, cross } from "./graphics-math";
+import { dot, normalize, add, cross } from "./gmath";
 
 // Dot Product
 test("벡터의 내적을 구하며 반환 값으로 스칼라 값이 나와야한다.", () => {
