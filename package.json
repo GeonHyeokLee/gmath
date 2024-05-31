@@ -18,6 +18,11 @@
       "require": "./dist/index.cjs"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeonHyeokLee/gmath.git"
+  },
+  "homepage": "https://github.com/GeonHyeokLee/gmath",
   "license": "MIT",
   "scripts": {
     "prepack": "npm run build",
