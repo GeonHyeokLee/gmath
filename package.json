@@ -1,5 +1,5 @@
 {
-  "name": "graphics-math",
+  "name": "@ghlee/gmath",
   "version": "0.0.3",
   "main": "dist/index.js",
   "keywords": [
