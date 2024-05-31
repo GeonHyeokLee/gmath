@@ -1,6 +1,6 @@
 {
-  "name": "graphics-math",
-  "version": "0.0.3",
+  "name": "@ghlee/gmath",
+  "version": "0.0.0",
   "main": "dist/index.js",
   "keywords": [
     "math",
